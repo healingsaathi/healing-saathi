@@ -5,7 +5,7 @@ const cors = require('cors');
 const server = express();
 server.use((cors()));
 server.use(bodyparser.json());
-//database connection
+
 
 const db = mysql.createConnection({
     host: "localhost",
