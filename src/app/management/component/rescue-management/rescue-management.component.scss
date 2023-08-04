@@ -1,0 +1,82 @@
+.border-line-top{
+    margin-top: 1rem;
+    height: 0.5rem;
+    border-bottom: 2px solid #d0d0ce;
+    border-bottom-width: thin;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin-right: 1.5em;
+    left: 15px;
+}
+.border-line-down{
+    border-bottom: 2px solid #d0d0ce;
+    border-bottom-width: thin;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin-top: 0.5em;
+    margin-right: 1.5em;
+    left: 15px;
+}
+.header{
+    font-weight: 700;
+    font-size: 30px;
+    color: #282a2e;
+    padding-left: 0.5em;
+    font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif';
+}
+.subheader-text{
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    color: #434448;
+    padding-left: 0.9em;
+    font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif';
+}
+.rescue-form-div{
+    left: 15px;
+    .form{
+        display: block;
+        margin-top: 0em;
+        left: auto;
+    }
+}
+.rescue-second-row{
+    margin-top: -1em;
+}
+.pt-2{
+    padding-top: .5rem!important;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+@media (min-width: 768px){
+    .rescue-form-div{
+        .rescue-first-row{
+            .col-md-3 {
+                flex: 0 0 auto;
+                width: 21%;
+            }
+        }
+    }
+}
+
+.modal-form-column{
+    margin-bottom: 2.813rem;
+    margin-left: 2em;
+    label.row{
+        margin-left: 0.1em;
+        margin-bottom: .3em;
+        color: #69707a;
+        font-size: .8125rem;
+        font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif';
+    }
+    .tag-number, .dog-name, .dog-colour, .symptom{
+        width: 12em;
+        font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif'; 
+        font-size: .8125rem;  
+    }
+    .symptom, .taken-to, .intial-action, .location-details{
+        width: 20em;
+        font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif'; 
+        font-size: .8125rem; 
+    }
+}

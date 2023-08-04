@@ -1,0 +1,35 @@
+.border-line-top{
+    margin-top: 1rem;
+    height: 0.5rem;
+    border-bottom: 2px solid #d0d0ce;
+    border-bottom-width: thin;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin-right: 1.5em;
+    left: 15px;
+}
+.border-line-down{
+    border-bottom: 2px solid #d0d0ce;
+    border-bottom-width: thin;
+    margin-bottom: 1.5rem;
+    position: relative;
+    margin-top: 0.5em;
+    margin-right: 1.5em;
+    left: 15px;
+}
+.header{
+    font-weight: 700;
+    margin-top: -22px;
+    font-size: 30px;
+    color: #282a2e;
+    padding-left: 0.5em;
+    font-family: 'FrutigerLTStd-Light,"Frutiger LT Std 45 Light","Frutiger LT Std 55 Roman",Frutiger LT Std,sans-serif';
+}
+.stock-form-div{
+    left: 15px;
+    .form{
+        display: block;
+        margin-top: 0em;
+        left: auto;
+    }
+}

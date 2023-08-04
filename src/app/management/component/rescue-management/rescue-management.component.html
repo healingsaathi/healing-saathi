@@ -1,0 +1,61 @@
+<div class="shared-lib-container-expand top-container">
+    <div class="border-line-top"></div>
+    <div class="header">Animal intial record</div>
+    <div class="subheader-text">This register records the number of the animals at the farm along with their identification number or details.</div>
+    <div class="border-line-down"></div>
+    <div class="rescue-form-div">
+        <form [formGroup]="rescueForm" (ngSubmit)="rescueSubmit()">
+            <div class="rescue-first-row row rescue-form-fields-row pt-2">
+                <div class="sh-column sh-width-200 col-md-3">
+                    <div class="modal-form-column">
+                        <label class="row">Tag Number *</label>
+                        <input class="tag-number form-control row sh-form-control-fields" id="tagnumber" type="text" placeholder="Enter Tag Number" formControlName="tagnumber">
+                    </div>
+                </div>
+                <div class="sh-column sh-width-200 col-md-3">
+                    <div class="modal-form-column">
+                        <label class="row">Name of The Dog *</label>
+                        <input class="dog-name form-control row sh-form-control-fields" id="dogname" type="text" placeholder="Enter Dog Name" formControlName="dogname">
+                    </div>
+                </div>
+                <div class="sh-column sh-width-200 col-md-3">
+                    <div class="modal-form-column">
+                        <label class="row">Colour *</label>
+                        <input class="dog-colour form-control row sh-form-control-fields" id="dogcolour" type="text" placeholder="Enter Colour Name" formControlName="colourname">
+                    </div>
+                </div>
+                <div class="sh-column sh-width-200 col-md-3">
+                    <div class="modal-form-column">
+                        <label class="row">Intial symptom/ condition *</label>
+                        <textarea class="symptom form-control row sh-form-control-fields" id="intialsymptom" type="text" placeholder="Enter symptom here" rows="5" cols="30" pInputTextarea formControlName="intialsymptom"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="rescue-second-row row rescue-form-fields-row pt-2">
+                <div class="sh-column sh-width-200 col-md-4">
+                    <div class="modal-form-column">
+                        <label class="row">Taken to *</label>
+                        <textarea class="taken-to form-control row sh-form-control-fields" id="takento" type="text" placeholder="Taken To" rows="5" cols="30" pInputTextarea formControlName="takento"></textarea>
+                    </div>
+                </div>
+                <div class="sh-column sh-width-200 col-md-4">
+                    <div class="modal-form-column">
+                        <label class="row">Intial action taken *</label>
+                        <textarea class="intial-action form-control row sh-form-control-fields" id="intialactiontaken" type="text" placeholder="Enter Details of Intial Action" rows="5" cols="30" pInputTextarea formControlName="intialactiontaken"></textarea>
+                    </div>
+                </div>
+                <div class="sh-column sh-width-200 col-md-4">
+                    <div class="modal-form-column">
+                        <label class="row">Location Details *</label>
+                        <textarea class="location-details form-control row sh-form-control-fields" id="locationdetails" type="text" placeholder="Enter Location Details" rows="5" cols="30" pInputTextarea formControlName="locationdetails"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="rescue-third-row row rescue-form-fields-row">
+                <div class="card flex justify-content-center">
+                    <button pButton pRipple label="Submit" class="p-button-success"></button>                
+                </div>  
+            </div>
+        </form>
+    </div>
+</div>
