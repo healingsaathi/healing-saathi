@@ -33,6 +33,8 @@ server.listen(8080, function check(error){
         console.log("Started...!!! 8080");
     }
 });
+
+    //add DATA
     server.post("/api/rescue_details/add", (req,res) => {
         let tagNumber= req.body.tagnumber;
         let dogName= req.body.dogname;
@@ -52,6 +54,27 @@ server.listen(8080, function check(error){
             });
         });
     });
+
+    server.post("/api/stock_details/add", (req,res) => {
+        let billnumber= req.body.billnumber;
+        let entrydate= req.body.entrydate;
+        let billingdate= req.body.billingdate;
+        let medicinename= req.body.medicinename;
+        let expirydate= req.body.expirydate;
+        let totalunit= req.body.totalunit;
+        let unitprice= req.body.unitprice;
+        let totalprice= totalunit*unitprice;
+
+        let qr = `insert into rescue_details(billnumber,entrydate,billingdate,medicinename,expirydate,totalunit,unitprice,totalprice) value('${billnumber}','${entrydate}','${billingdate}','${medicinename}','${expirydate}','${totalunit}','${unitprice}', '${totalprice})`;
+
+        db.query(qr, (err,results) => {
+            if(err){console.log(err)}
+            res.send({
+                message: "Stock added successfully",
+                data:results
+            });
+        });
+    });
 //get All data
     server.get('/api/rescue_details', (req, res)=> {
         let qrr = 'SELECT * FROM rescue_details';
@@ -62,6 +85,21 @@ server.listen(8080, function check(error){
             if(results.length>0){
                 res.send({
                     message: 'All rescue Details',
+                    data: results
+                });
+            }
+        });
+    });
+
+    server.get('/api/stock_details', (req, res)=> {
+        let qrr = 'SELECT * FROM stock_details';
+        db.query(qrr, (err,results)=>{
+            if(err){
+                console.log(err, 'errs');
+            }
+            if(results.length>0){
+                res.send({
+                    message: 'All stock Details',
                     data: results
                 });
             }
